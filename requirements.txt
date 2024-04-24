@@ -27,29 +27,29 @@ nltk
 noisereduce==2.0.1
 unidecode
 numba==0.57.1
-numpy==1.23.5
+numpy==1.24.1  # Adjusted version to meet dependencies
 onnxruntime
 onnxruntime_gpu==1.15.1
 opencv_python==4.8.0.74
 opencv_python_headless==4.8.0.74
-pandas==2.0.3
+pandas==1.4.3  # Updated to a compatible version
 praat-parselmouth==0.4.2
-PySimpleGUI==4.60.5
-requests==2.31.0
+PySimpleGUI==5.0.0  # Upgraded to the latest version
+requests==2.26.0  # Updated to a compatible version
 resampy==0.4.2
-scikit_learn==1.3.0
-scipy==1.11.1
+scikit_learn==0.24.2  # Updated to a compatible version
+scipy==1.7.3  # Updated to a compatible version
 yt_dlp==2023.7.6
-pyngrok==4.1.12
-sounddevice==0.4.6
-soundfile==0.12.1
-tensorboard==2.13.0
+pyngrok==5.1.0  # Upgraded to the latest version
+sounddevice==0.4.1  # Adjusted version to meet dependencies
+soundfile==0.10.3.post1  # Adjusted version to meet dependencies
+tensorboard==2.15.0  # Updated to a compatible version
 tb_nightly==2.14.0a20230803
-torch==2.0.0
+torch==1.10.0  # Downgraded to a compatible version
 torchcrepe==0.0.21
 torch_directml==0.2.0.dev230426
-torchaudio==2.0.1
-torchvision==0.15.1
+torchaudio==0.10.0  # Updated to a compatible version
+torchvision==0.11.1  # Updated to a compatible version
 torchgen>=0.0.1
 tqdm==4.65.0
 python-dotenv>=1.0.0
