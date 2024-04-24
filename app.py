@@ -1,4 +1,5 @@
 import os, sys
+
 os.system("pip install pyworld") # ==0.3.3
 
 now_dir = os.getcwd()
@@ -3141,24 +3142,29 @@ def GradioSetup(UTheme=gr.themes.Soft()):
             )
         return app
 
+import gradio as gr
+
+# Define your interface components and functions here
+
 def GradioRun(app):
     share_gradio_link = config.iscolab or config.paperspace
     concurrency_count = 511
     max_size = 1022
 
-    if (
-        config.iscolab or config.paperspace
-    ):  
+    if share_gradio_link:  
         app.queue(concurrency_count=concurrency_count, max_size=max_size).launch(
-        favicon_path="./images/icon.png",
+            favicon_path="./images/icon.png",
         )
     else:
         app.queue(concurrency_count=concurrency_count, max_size=max_size).launch(
-        favicon_path=".\images\icon.png",
+            favicon_path=".\images\icon.png",
         )
 
 if __name__ == "__main__":
+    gr.Interface(fn, inputs, outputs).launch(share=True)
+    
     if os.name == 'nt': 
         print(i18n("Any ConnectionResetErrors post-conversion are irrelevant and purely visual; they can be ignored.\n"))
+    
     app = GradioSetup(UTheme=config.grtheme)
     GradioRun(app)
